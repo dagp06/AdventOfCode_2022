@@ -141,12 +141,14 @@
   <ItemGroup>
     <ClCompile Include="Source\AdventOfCode.cpp"/>
     <ClCompile Include="Source\Challenges\Challenge_02.cpp"/>
+    <ClCompile Include="Source\Challenges\Challenge_03.cpp"/>
     <ClCompile Include="Source\Challenges\Challenge_N.cpp"/>
     <ClCompile Include="Source\Challenges\Common\Challenge.cpp"/>
     <ClCompile Include="Source\Helpers\FileHelpers.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Challenges\Challenge_02.h"/>
+    <ClInclude Include="Source\Challenges\Challenge_03.h"/>
     <ClInclude Include="Source\Challenges\Challenge_N.h"/>
     <ClInclude Include="Source\Challenges\Common\Challenge.h"/>
     <ClInclude Include="Source\CommonDefinitions.h"/>
