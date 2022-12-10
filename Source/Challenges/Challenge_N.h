@@ -2,6 +2,8 @@
 
 #include "Common/Challenge.h"
 
+using namespace std;
+
 class CChallenge_N : public CChallenge
 {
 private:
@@ -13,5 +15,5 @@ private:
     virtual EErrorCode Run_SecondPart() override;
     virtual EErrorCode CleanUp_SecondPart() override;
 
-    static std::string const sm_inputFilePath;
+    static string const sm_inputFilePath;
 };

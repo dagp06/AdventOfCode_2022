@@ -139,17 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\AdventOfCode.cpp" />
-    <ClCompile Include="Source\Challenges\Challenge_N.cpp" />
-    <ClCompile Include="Source\Challenges\Common\Challenge.cpp" />
-    <ClCompile Include="Source\Helpers\FileHelpers.cpp" />
+    <ClCompile Include="Source\AdventOfCode.cpp"/>
+    <ClCompile Include="Source\Challenges\Challenge_02.cpp"/>
+    <ClCompile Include="Source\Challenges\Challenge_N.cpp"/>
+    <ClCompile Include="Source\Challenges\Common\Challenge.cpp"/>
+    <ClCompile Include="Source\Helpers\FileHelpers.cpp"/>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Challenges\Challenge_N.h" />
-    <ClInclude Include="Source\Challenges\Common\Challenge.h" />
-    <ClInclude Include="Source\CommonDefinitions.h" />
-    <ClInclude Include="Source\Generated\GeneratedDefinitions.h" />
-    <ClInclude Include="Source\Helpers\FileHelpers.h" />
+    <ClInclude Include="Source\Challenges\Challenge_02.h"/>
+    <ClInclude Include="Source\Challenges\Challenge_N.h"/>
+    <ClInclude Include="Source\Challenges\Common\Challenge.h"/>
+    <ClInclude Include="Source\CommonDefinitions.h"/>
+    <ClInclude Include="Source\Generated\GeneratedDefinitions.h"/>
+    <ClInclude Include="Source\Helpers\FileHelpers.h"/>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

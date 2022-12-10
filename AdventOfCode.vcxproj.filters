@@ -1,15 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source" />
-    <Filter Include="Source\Challenges" />
-    <Filter Include="Source\Challenges\Common" />
-    <Filter Include="Source\Generated" />
-    <Filter Include="Source\Helpers" />
+    <Filter Include="Source"/>
+    <Filter Include="Source\Challenges"/>
+    <Filter Include="Source\Challenges\Common"/>
+    <Filter Include="Source\Generated"/>
+    <Filter Include="Source\Helpers"/>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\AdventOfCode.cpp">
       <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Challenges\Challenge_02.cpp">
+      <Filter>Source\Challenges</Filter>
     </ClCompile>
     <ClCompile Include="Source\Challenges\Challenge_N.cpp">
       <Filter>Source\Challenges</Filter>
@@ -22,6 +25,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Challenges\Challenge_02.h">
+      <Filter>Source\Challenges</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Challenges\Challenge_N.h">
       <Filter>Source\Challenges</Filter>
     </ClInclude>
