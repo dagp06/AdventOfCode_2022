@@ -47,7 +47,7 @@ EErrorCode CChallenge_06::SetUp_SecondPart()
         return readErrorCode;
     }
 
-	m_DataStreamBuffer = lines[0];
+    m_DataStreamBuffer = lines[0];
 
     return EErrorCode::Success;
 }
@@ -59,39 +59,39 @@ EErrorCode CChallenge_06::Run_SecondPart()
 
 EErrorCode CChallenge_06::CleanUp_SecondPart()
 {
-	cout << "The first start-of-packer marker is detected after processing " << ComputeCharsToProcessToFindMarker(14) << " characters" << endl;
+    cout << "The first start-of-packer marker is detected after processing " << ComputeCharsToProcessToFindMarker(14) << " characters" << endl;
 
     return EErrorCode::Success;
 }
 
 int CChallenge_06::ComputeCharsToProcessToFindMarker(int _markerLength)
 {
-	int endOfMarkerIdx = 0;
+    int endOfMarkerIdx = 0;
 
-	for (int i = 0; i < m_DataStreamBuffer.size();)
-	{
-		endOfMarkerIdx = i + _markerLength - 1;
-		bool sameCharactersFound = false;
+    for (int i = 0; i < m_DataStreamBuffer.size();)
+    {
+        endOfMarkerIdx = i + _markerLength - 1;
+        bool sameCharactersFound = false;
 
-		for (int j = i; j < endOfMarkerIdx; ++j)
-		{
-			for (int k = j + 1; k <= endOfMarkerIdx; ++k)
-			{
-				if (m_DataStreamBuffer[j] == m_DataStreamBuffer[k])
-				{
-					sameCharactersFound = true;
-					i = j + 1; // The char at pos j is also present within the next [_markerLength] chars. The next char to test (i) should be the one after the one at pos j.
-					break;
-				}
-			}
+        for (int j = i; j < endOfMarkerIdx; ++j)
+        {
+            for (int k = j + 1; k <= endOfMarkerIdx; ++k)
+            {
+                if (m_DataStreamBuffer[j] == m_DataStreamBuffer[k])
+                {
+                    sameCharactersFound = true;
+                    i = j + 1; // The char at pos j is also present within the next [_markerLength] chars. The next char to test (i) should be the one after the one at pos j.
+                    break;
+                }
+            }
 
-			if (sameCharactersFound)
-				break;
-		}
+            if (sameCharactersFound)
+                break;
+        }
 
-		if (!sameCharactersFound)
-			break; // We found the start-of-packet marker !
-	}
+        if (!sameCharactersFound)
+            break; // We found the start-of-packet marker !
+    }
 
     return endOfMarkerIdx + 1;
 }

@@ -27,12 +27,12 @@ EErrorCode CChallenge_03::SetUp_FirstPart()
 
 EErrorCode CChallenge_03::Run_FirstPart()
 {
-	int prioritiesSum = 0;
+    int prioritiesSum = 0;
     for (const string& rucksackContent : m_AllRucksackContent)
     {
         char duplicateItem = (char)0;
 
-		const size_t halfLineIndex = rucksackContent.size() / 2;
+        const size_t halfLineIndex = rucksackContent.size() / 2;
         const string firstCompartment = rucksackContent.substr(0, halfLineIndex);
         const string secondCompartment = rucksackContent.substr(halfLineIndex, halfLineIndex);
         for (const char& item : firstCompartment)
@@ -67,12 +67,12 @@ EErrorCode CChallenge_03::SetUp_SecondPart()
     if (readErrorCode != EErrorCode::Success)
     {
         return readErrorCode;
-	}
+    }
 
-	for (const string& line : lines)
-	{
-		m_AllRucksackContent.push_back(line);
-	}
+    for (const string& line : lines)
+    {
+        m_AllRucksackContent.push_back(line);
+    }
     
     return EErrorCode::Success;
 }
@@ -95,7 +95,7 @@ EErrorCode CChallenge_03::Run_SecondPart()
 
         const string& smallesContentInGroup = m_AllRucksackContent[smallestContentIndex];
         for (const char& item : smallesContentInGroup)
-		{
+        {
             bool itemNotFound = false;
             for (int j = 0; j < elvesPerGroup; ++j)
             {
@@ -113,12 +113,12 @@ EErrorCode CChallenge_03::Run_SecondPart()
             if (itemNotFound)
                 continue;
 
-			prioritiesSum += ComputeItemPriority(item);
+            prioritiesSum += ComputeItemPriority(item);
             break;
         }
-	}
+    }
 
-	cout << "The sum of the priorities is " << prioritiesSum << "." << endl;
+    cout << "The sum of the priorities is " << prioritiesSum << "." << endl;
 
     return EErrorCode::Success;
 }
@@ -137,8 +137,8 @@ int CChallenge_03::ComputeItemPriority(char _item)
         priority = _item - 'a' + 1;
     }
     else
-	{
-		priority = _item - 'A' + 27;
+    {
+        priority = _item - 'A' + 27;
     }
 
     return priority;
