@@ -8,5 +8,6 @@
 #include "../Challenges/Challenge_06.h"
 #include "../Challenges/Challenge_07.h"
 #include "../Challenges/Challenge_08.h"
+#include "../Challenges/Challenge_09.h"
 #include "../Challenges/Challenge_N.h"
 #pragma endregion challenge_includes
