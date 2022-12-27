@@ -17,7 +17,8 @@ private:
 
         int ComputeSize() const { return m_End - m_Start + 1; }
 
-        bool Overlaps(const Range& _other) const;
+        bool FullyContains(const Range& _other) const { return _other.m_Start >= m_Start && _other.m_End <= m_End; }
+        bool CanMergeWith(const Range& _other) const;
         void MergeWith(const Range& _other);
 
         bool operator<(const Range& _other) const { return m_Start < _other.m_Start || m_Start == _other.m_Start && m_End < _other.m_End; }
@@ -29,6 +30,9 @@ private:
     class RangeList
     {
     public:
+        const set<Range>& GetRanges() const { return m_Ranges; }
+        int GetRangeCount() const { return (int)m_Ranges.size(); }
+
         void AddRange(const Range& _range);
         int ComputeTotalSize() const;
 
@@ -63,4 +67,6 @@ private:
     // Key: Sensor's Pos / Value: Detected Beacon's Pos
     map<Position, Position> m_SensorsBeacon;
     set<Position> m_Beacons;
+
+    vector<RangeList> m_SensorCoveredRanges;
 };
