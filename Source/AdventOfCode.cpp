@@ -6,8 +6,8 @@
 
 
 // EDIT HERE:  These lines will change what is executed
-#define CHALLENGE_TYPE CChallenge_14
-#define IS_FIRST_PART false
+#define CHALLENGE_TYPE CChallenge_15
+#define IS_FIRST_PART true
 
 // EDIT_HERE:  Set this to true if your console closes before you have time to see your results at the end of the program
 #define HOLD_EXECUTION true
